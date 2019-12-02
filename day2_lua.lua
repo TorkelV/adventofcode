@@ -9,7 +9,6 @@ while(input[i] ~= 99) do
   p = input[i+3]+1
   if(operator == 1) then --plus
       input[p] = a+b
-      
   end
   if(operator == 2) then -- multiply
     input[p] = a*b
