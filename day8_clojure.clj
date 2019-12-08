@@ -7,7 +7,7 @@
     (* (get layer \2) (get layer \1))))
 	
 (defn day8_part2 [width height]
-  (let [input (slurp "resources/day9input.txt")]
+  (let [input (slurp "resources/day8input.txt")]
     (->> input
          seq
          (partition (* width height))
@@ -19,5 +19,5 @@
          (clojure.string/join "\n")
          )))
 	   
-(def day8-part1-answer (day8-part1 25 6 (slurp "resources/day9input.txt")))
-(def day8-part2-answer (day8-part2 25 6 (slurp "resources/day9input.txt")))
+(def day8-part1-answer (day8-part1 25 6 (slurp "resources/day8input.txt")))
+(def day8-part2-answer (day8-part2 25 6 (slurp "resources/day8input.txt")))
