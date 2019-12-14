@@ -14,19 +14,16 @@ function f(visited, tovisit, edges) {
     return f(visited, tovisit, edges);
 }
 function l() {
-    const grouped = arr.reduce((a, b) => {
+    const grouped = input.split(",").map(e => e.split(")")).reduce((a, b) => {
         a[b[0]] = a[b[0]] || []
         a[b[0]].push(b[1])
         return a;
     }, {});
     const k = (n) => n instanceof Array ? n.map(j => k(j)) : grouped[n] instanceof Array ? k(grouped[n]).concat(n) : n;
-    Object.values(grouped).map(e => k(e)).flat(Infinity)
+    return Object.values(grouped).map(e => k(e)).flat(Infinity).length
 }
 
 const answers = {
-    part1:
-        part2: f([], edges["YOU"].map(e => [e, 0]), edges),
-
-
-
+    part1: l(),
+    part2: f([], edges["YOU"].map(e => [e, 0]), edges),
 }
